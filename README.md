@@ -1,95 +1,92 @@
-Drone Navigation in Webots
-This project simulates the autonomous navigation of a quadcopter drone using Webots — an open-source 3D robotics simulator. The simulation is focused on creating an environment where a drone can fly from a starting point to a destination while avoiding obstacles.
+# 🚁 Drone Navigation in Webots
 
-🚀 Project Overview
-The objective of this project is to:
+This project simulates the autonomous navigation of a quadcopter drone using **Webots** — an open-source 3D robotics simulator. The drone navigates from a defined start point to a destination while avoiding obstacles in a custom environment.
 
-Simulate basic drone flight dynamics in Webots.
+---
 
-Build a custom environment with obstacles.
+## 🚀 Project Goals
 
-Implement simple navigation logic using onboard sensors (e.g., distance sensors, GPS).
+- Simulate basic drone flight in Webots  
+- Build a custom world with obstacles  
+- Implement simple navigation logic using sensors (e.g., GPS, distance sensors)  
+- Expand into SLAM and RL-based control
 
-Eventually expand to advanced control (SLAM or RL-based).
+---
 
-📁 Project Structure
+## 📁 Project Structure
+
+```
 drone-navigation-webots/
 ├── .gitignore
 ├── .project
-├── README.md ← You're reading this!
+├── README.md              ← You're here!
 ├── controllers/
-│ └── mavic2pro/
-│ ├── Makefile
-│ └── mavic2pro.c ← Main drone controller code
+│   └── mavic2pro/
+│       ├── Makefile
+│       └── mavic2pro.c    ← Drone control code
 ├── worlds/
-│ ├── .drone-world.jpg
-│ └── drone-world.wbt ← Simulation world environment
+│   ├── .drone-world.jpg
+│   └── drone-world.wbt    ← Simulation world
+```
 
-🛠 Setup Instructions
-Install Webots
-Download from: https://cyberbotics.com/#download
+---
 
-Clone the Repository
-git clone https://github.com/Sahana1230spec/drone-navigation-webots.git
-cd drone-navigation-webots
+## 🛠️ Setup Instructions
 
-Open Webots
-Go to File → Open World → Select drone-world.wbt
+1. **Install Webots**  
+   Download from: [https://cyberbotics.com/#download](https://cyberbotics.com/#download)
 
-Run Simulation
-Hit the Play button in Webots
-The mavic2pro controller handles the drone’s basic flight logic
+2. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Sahana1230spec/drone-navigation-webots.git
+   cd drone-navigation-webots
+   ```
 
-🌍 Environment Details
-The simulation world (drone-world.wbt) is customizable. You can add:
+3. **Open Webots**
+   - Go to `File → Open World`
+   - Select `drone-world.wbt`
 
-Solids like Box, Cylinder for obstacles
+4. **Run the Simulation**
+   - Click the Play ▶️ button
+   - The `mavic2pro` controller handles basic drone logic
 
-Custom floor or maze layouts
+---
 
-Use Supervisor nodes for external control or automation
+## 🌍 Environment Details
 
-A future update will include:
+- Add obstacles using `Box`, `Cylinder`, etc.
+- Create floor layouts or simple mazes
+- Use Supervisor nodes for high-level control
 
-Dynamic pathfinding
+> **Future Updates:**
+> - Obstacle avoidance logic  
+> - Goal-based navigation  
+> - Dynamic path planning
 
-Obstacle avoidance
+---
 
-Goal-point navigation
+## 🧠 Problem Statement
 
-🧠 Problem Statement
-Simulate an autonomous drone that takes off from a predefined start location and navigates toward a destination while avoiding static obstacles in a virtual 3D environment.
+> Build an autonomous drone system that flies from a defined start point to a goal, while avoiding static obstacles in a 3D virtual world.
 
-This setup serves as a base for experimenting with:
+This serves as a base for:
+- PID tuning  
+- Visual SLAM (e.g., ORB-SLAM3)  
+- RL-based navigation (e.g., PPO, DQN)
 
-PID tuning
+---
 
-Path planning
+## ✅ Features
 
-Visual SLAM
+- Quadcopter take-off & hover  
+- Custom obstacle environment  
+- Navigation logic (WIP)  
+- Autonomous goal-reaching (Coming Soon)
 
-Reinforcement Learning
+---
 
-💡 Features
-✅ Quadcopter take-off and hover
+## 📌 Future Scope
 
-✅ Manual obstacle course setup
-
-🕒 Navigation logic (in progress)
-
-🕒 Autonomous goal-reaching (upcoming)
-
-📸 Demo (Coming Soon!)
-GIFs/screenshots will be added once navigation logic is implemented.
-
-✍️ Author
-Sahana K
-Computer Science Undergraduate, RV Institute of Technology and Management
-Interests: AI, Robotics, Research, Finance & building tech for real-world impact
-
-📌 Future Scope
-Integrate ORB-SLAM3 for real-time mapping
-
-Use PPO/DQN with OpenAI Gym-style wrappers for autonomous learning
-
-Upgrade the environment to support dynamic moving objects
+- ORB-SLAM3 integration  
+- RL with PPO/DQN using Gym-style wrappers  
+- Dynamic environments with moving obstacles
